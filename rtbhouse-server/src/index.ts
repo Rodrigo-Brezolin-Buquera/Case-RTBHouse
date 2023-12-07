@@ -1,7 +1,7 @@
-import express, {Request, Response} from "express"
-import "express-async-errors";
+import express from "express"
 import cors from "cors"
 import { AddressInfo } from "net"
+import { Controller } from "./controller/Controller";
 
 export const app = express()
 app.use(express.json())
@@ -16,8 +16,8 @@ const server = app.listen(3003, () => {
   }
 })
 
-app.get("/test", (req: Request, res: Response)=>{
-    res.status(200).send({message: "Sucesso"})
-} )
+const controller = new Controller()
+
+app.get("/productsData", controller.findProductsData)
 
 
