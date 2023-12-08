@@ -1,10 +1,13 @@
+import { MainPage } from "./pages/mainPage";
+import { GlobalStyled } from "./theme";
 
 
 function App() {
   return (
-    <div>
-      RTB Client
-    </div>
+    <>
+      <GlobalStyled/>
+      <MainPage/>
+    </>
   );
 }
 
