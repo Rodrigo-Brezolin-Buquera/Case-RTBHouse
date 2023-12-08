@@ -8,13 +8,13 @@ describe("E2E Tests", () => {
     expect(response.status).toBe(200)
     expect(response.body.result.length).toBe(18);
     expect(response.body.result[0]).toEqual({
-        id: 101,
-        name: "Smart TV",
-        price: 899,
-        storeName: "ElectroMart",
-        amountSold: 1,
-        totalRevenue: 899
-        });
-    ;
+      id: 101,
+      name: "Smart TV",
+      price: 899,
+      storeName: "ElectroMart",
+      amountSold: 1,
+      totalRevenue: 899
+    });
+    
   });
 });

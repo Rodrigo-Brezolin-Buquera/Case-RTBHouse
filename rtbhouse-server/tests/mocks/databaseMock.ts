@@ -20,15 +20,15 @@ export class DatabaseMock implements Repository {
   public async findProductById(id: number): Promise<Product> {
     return id == 101
       ? { id: 101,
-         name: "Smart TV",
-          price: 899.0, 
-          storeName: "ElectroMart" 
-        }
+        name: "Smart TV",
+        price: 899.0, 
+        storeName: "ElectroMart" 
+      }
       : {
-          id: 112,
-          name: "Fitness Tracker",
-          price: 79.95,
-          storeName: "SportsZone",
-        };
+        id: 112,
+        name: "Fitness Tracker",
+        price: 79.95,
+        storeName: "SportsZone",
+      };
   }
 }

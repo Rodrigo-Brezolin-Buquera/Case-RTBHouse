@@ -13,12 +13,12 @@ export interface ProductDB {
 }
 
 export const toModelProduct = (product:ProductDB): Product => {
-    return {
-        id: product.id,
-        name: product.name, 
-        price: product.price,
-        storeName: product.store_name
-    }
+  return {
+    id: product.id,
+    name: product.name, 
+    price: product.price,
+    storeName: product.store_name
+  }
 }
 
 export interface ProductStatistic {

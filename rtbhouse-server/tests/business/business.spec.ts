@@ -1,6 +1,6 @@
 import { Business } from "../../src/business/Business";
 import { DatabaseMock } from "../mocks/databaseMock";
-import { describe, test, expect } from '@jest/globals';
+import { describe, test, expect } from "@jest/globals";
 
 const business = new Business(new DatabaseMock());
 
