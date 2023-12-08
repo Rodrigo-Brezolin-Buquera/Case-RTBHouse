@@ -1,12 +1,13 @@
-import { Database } from "../database/Database";
 import { AggregatedData } from "../model/order";
 import { ProductStatistic } from "../model/product";
+import { Repository } from "./Repository";
 
 export class Business {
-  public async findProductsData(): Promise<ProductStatistic[]> {
-    const database = new Database();
+  constructor(private database: Repository ){}
 
-    const orders = await database.findOrders();
+  public async findProductsData(): Promise<ProductStatistic[]> {
+
+    const orders = await this.database.findOrders();
 
     const totalAmounts: AggregatedData = {};
     orders.forEach(({ products }) => {
@@ -18,7 +19,7 @@ export class Business {
     const productIds = Object.keys(totalAmounts);
 
     const productsPromises = productIds.map(async (id) => {
-      const product = await database.findProductById(Number(id));
+      const product = await this.database.findProductById(Number(id));
       const amountSold = totalAmounts[id]
       const productRevenue = (product.price * amountSold).toFixed(2)
       return {

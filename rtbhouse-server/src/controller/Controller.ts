@@ -3,10 +3,11 @@ import { Request, Response } from "express";
 import { CustomError } from "../error/customError";
 
 export class Controller {
+  constructor(private business: Business){}
+  
   public async findProductsData(req: Request, res: Response): Promise<any> {
     try {
-      const business = new Business();
-      const result = await business.findProductsData();
+      const result = await this.business.findProductsData();
       res.status(200).send({ result });
     } catch (error) {
         if(error instanceof CustomError) {

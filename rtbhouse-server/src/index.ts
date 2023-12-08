@@ -1,11 +1,13 @@
-import express from "express"
-import cors from "cors"
-import { AddressInfo } from "net"
+import express from "express";
+import cors from "cors";
+import { AddressInfo } from "net";
 import { Controller } from "./controller/Controller";
+import { Business } from "./business/Business";
+import { Database } from "./database/Database";
 
-export const app = express()
-app.use(express.json())
-app.use(cors())
+export const app = express();
+app.use(express.json());
+app.use(cors());
 
 const server = app.listen(3003, () => {
   if (server) {
@@ -14,10 +16,10 @@ const server = app.listen(3003, () => {
   } else {
     console.error("Failure upon starting server.");
   }
-})
+});
 
-const controller = new Controller()
+const database = new Database()
+const business = new Business(database)
+const controller = new Controller(business);
 
-app.get("/productsData", controller.findProductsData)
-
-
+app.get("/productsData", (req, res) => controller.findProductsData(req, res));

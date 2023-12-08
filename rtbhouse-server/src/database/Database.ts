@@ -1,8 +1,9 @@
+import { Repository } from "../business/Repository";
 import { CustomError } from "../error/customError";
 import { Order, OrderDB, toModelOrders } from "../model/order";
 import { Product, ProductDB, toModelProduct } from "../model/product";
 
-export class Database {
+export class Database implements Repository {
     public async findOrders(): Promise<Order[]> {
         const orders:OrderDB[] = require("./data/orders.json")
         const result = orders.map(order => toModelOrders(order))
