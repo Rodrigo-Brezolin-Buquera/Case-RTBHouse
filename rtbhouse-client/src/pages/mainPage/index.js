@@ -1,12 +1,11 @@
 import { Header } from "../../components/header"
 import { Loading } from "../../components/loading"
+import { ProductsTable } from "../../components/productsTable"
 import { useRequestData } from "../../hooks/useRequestData"
 import { MainContainer } from "./styles"
 
 export const MainPage = () => {
   const [products, loading] = useRequestData("/productsData", [])
-
-  console.log(products)
 
   return (
     <>
@@ -17,7 +16,7 @@ export const MainPage = () => {
           loading ?
             <Loading />
             :
-            <p>tabela</p>
+            <ProductsTable products={products}/>
         }
       </MainContainer>
     </>
