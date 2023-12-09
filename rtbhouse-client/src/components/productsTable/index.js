@@ -5,13 +5,13 @@ import { ColumnHeader, Row, TableItem } from './styles'
 export const ProductsTable = ({ products }) => {
 
     if (!products.length) {
-        return <p>No items sold</p>
+        return <p>No items found</p>
     }
 
     const productsList = products.map((product) => {
-        const { storeName, name, amountSold, price, totalRevenue } = product
+        const { storeName, name, amountSold, price, totalRevenue, id } = product
         return (
-            <Row>
+            <Row key={id}>
                 <TableItem>{storeName}</TableItem>
                 <TableItem> {name}</TableItem>
                 <TableItem>{formatPrice(price)}</TableItem>

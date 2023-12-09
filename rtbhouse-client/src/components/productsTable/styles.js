@@ -1,6 +1,5 @@
 import { styled } from "styled-components";
 
-
 export const ColumnHeader = styled.div`
     width: 160px;
     display:flex;
@@ -28,3 +27,4 @@ export const Row = styled.article`
   align-items: center;
   gap: 8px;
 `
+
