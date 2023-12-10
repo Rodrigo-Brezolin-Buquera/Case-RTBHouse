@@ -25,6 +25,7 @@
         "no-new-wrappers": "warn",
         "quotes":["warn", "double"],
         "no-unused-vars": "off",
-        "no-undef": "off"  
+        "no-undef": "off",
+        "exhaustive-deps": "off"  
     }
 }  

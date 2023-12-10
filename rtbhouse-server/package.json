@@ -12,7 +12,6 @@
     "start": " tsc && node ./build/src/index.js",
     "build": "tsc",
     "test": "jest",
-    "test:watch": "jest --watch",
     "test:coverage": "jest --collect-coverage",
     "lint": "eslint . --ext .ts",
     "lint:fix": "eslint . --ext .ts --fix"
