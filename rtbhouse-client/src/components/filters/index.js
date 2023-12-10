@@ -1,4 +1,4 @@
-import { FiltersContainer, InputLine, StyledButton, StyledInput, StyledLabel, StyledSelect } from './styles'
+import { FiltersContainer, InputLine, StyledButton, StyledInput, StyledLabel, StyledSelect } from "./styles"
 
 export const Filters = ({ inputHandlers, inputValues }) => {
     const {

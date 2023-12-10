@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react'
-import { api } from '../api'
+import { useState, useEffect } from "react"
+import { api } from "../api"
 
 export const useRequestData = (path, initialState) => {
     const [data, setData] = useState(initialState)

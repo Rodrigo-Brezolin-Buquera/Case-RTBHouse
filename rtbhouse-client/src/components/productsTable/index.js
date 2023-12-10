@@ -1,6 +1,5 @@
-import React from 'react'
-import { formatPrice } from '../../utils/formatPrice'
-import { AbsoluteText, ColumnHeader, Row, Table, TableContainer, TableItem } from './styles'
+import { formatPrice } from "../../utils/formatPrice"
+import { AbsoluteText, ColumnHeader, Row, Table, TableContainer, TableItem } from "./styles"
 
 export const ProductsTable = ({ products }) => {
 

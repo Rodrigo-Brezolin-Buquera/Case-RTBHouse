@@ -6,19 +6,19 @@ import { MainContainer, ProductsContainer } from "./styles"
 import { useMainPageLogic } from "./useMainPageLogic.js"
 
 export const MainPage = () => {
-  const [products, loading, inputHandlers, inputValues] = useMainPageLogic()
+    const [products, loading, inputHandlers, inputValues] = useMainPageLogic()
 
-  if (loading) {
-    return <Loading />
-  }
+    if (loading) {
+        return <Loading />
+    }
 
-  return (
-    <MainContainer>
-      <Header />
-      <ProductsContainer>
-        <Filters inputHandlers={inputHandlers} inputValues={inputValues} />
-        <ProductsTable products={products} />
-      </ProductsContainer>
-    </MainContainer>
-  )
+    return (
+        <MainContainer>
+            <Header />
+            <ProductsContainer>
+                <Filters inputHandlers={inputHandlers} inputValues={inputValues} />
+                <ProductsTable products={products} />
+            </ProductsContainer>
+        </MainContainer>
+    )
 }
