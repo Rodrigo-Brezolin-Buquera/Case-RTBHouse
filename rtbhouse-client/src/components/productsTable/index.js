@@ -1,6 +1,6 @@
 import React from 'react'
 import { formatPrice } from '../../utils/formatPrice'
-import { ColumnHeader, Row, Table, TableContainer, TableItem } from './styles'
+import { AbsoluteText, ColumnHeader, Row, Table, TableContainer, TableItem } from './styles'
 
 export const ProductsTable = ({ products }) => {
 
@@ -8,11 +8,11 @@ export const ProductsTable = ({ products }) => {
         const { storeName, name, amountSold, price, totalRevenue, id } = product
         return (
             <Row key={id}>
-                <TableItem width={"120px"}>{storeName}</TableItem>
-                <TableItem width={"200px"}> {name}</TableItem>
-                <TableItem width={"100px"} >{formatPrice(price)}</TableItem>
+                <TableItem width={"140px"}>{storeName}</TableItem>
+                <TableItem width={"220px"}> {name}</TableItem>
+                <TableItem width={"100px"} justify={"flex-end"} >{formatPrice(price)}</TableItem>
                 <TableItem width={"60px"} justify={"center"} >{amountSold}</TableItem>
-                <TableItem width={"100px"} >{formatPrice(totalRevenue)}</TableItem>
+                <TableItem width={"120px"} justify={"flex-end"} >{formatPrice(totalRevenue)}</TableItem>
             </Row>
         )
     })
@@ -22,11 +22,11 @@ export const ProductsTable = ({ products }) => {
             <h2>Product Sales</h2>
             <Table>
                 <Row>
-                    <ColumnHeader width={"120px"}>Store Name</ColumnHeader>
-                    <ColumnHeader width={"200px"}> Product</ColumnHeader>
-                    <ColumnHeader width={"100px"} >Price</ColumnHeader>
-                    <ColumnHeader width={"60px"} >Amount</ColumnHeader>
-                    <ColumnHeader width={"100px"} >Total Revenue</ColumnHeader>
+                    <ColumnHeader width={"140px"}>Store Name</ColumnHeader>
+                    <ColumnHeader width={"220px"}> Product</ColumnHeader>
+                    <ColumnHeader width={"100px"} justify={"center"} >Price</ColumnHeader>
+                    <ColumnHeader width={"60px"} justify={"center"} >Amount</ColumnHeader>
+                    <ColumnHeader width={"120px"} justify={"center"} >Total Revenue</ColumnHeader>
                 </Row>
                 {
                     products.length
@@ -34,9 +34,9 @@ export const ProductsTable = ({ products }) => {
                         productsList
                         :
                         <p>No items found</p>
-
                 }
             </Table>
+            <AbsoluteText>Rodrigo Brezolin Buquera, 2023</AbsoluteText>
         </TableContainer>
     )
 }

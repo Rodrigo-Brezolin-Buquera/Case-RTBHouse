@@ -1,23 +1,21 @@
 import { styled } from "styled-components";
 
-export const ColumnHeader = styled.div`
-    width: ${props => props.width};
-    display:flex;
-    justify-content:flex-start;
-    align-items: center;
-    padding: 8px 0;
-    font-weight: bold;
-    text-align: center;
-
+export const ColumnHeader = styled.h4`
+  width: ${props => props.width};
+  display:flex;
+  justify-content:  ${props => props.justify || "flex-start"} ;
+  align-items: center;
+  padding: 8px 0;
+  font-weight: bold;
+  text-align: center;
 `
 
-export const TableItem = styled.div`
-    width: ${props => props.width};
-    height: 28px;
-    display:flex;
-    justify-content:  ${props => props.justify || "flex-start" } ;
-    align-items: center;
-    
+export const TableItem = styled.p`
+  width: ${props => props.width};
+  height: 28px;
+  display:flex;
+  justify-content:  ${props => props.justify || "flex-start"} ;
+  align-items: center;  
 `
 
 export const Row = styled.article`
@@ -27,7 +25,7 @@ export const Row = styled.article`
   gap: 8px;
 `
 
-export const Table= styled.section`
+export const Table = styled.section`
   display:flex;
   flex-direction: column;
   justify-content: center;
@@ -48,5 +46,13 @@ export const TableContainer = styled.div`
   justify-content: flex-start;
   align-items: center;
   gap: 16px;
+  position:relative;
+`
+
+export const AbsoluteText = styled.p`
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  font-size: 0.9em;
 `
 

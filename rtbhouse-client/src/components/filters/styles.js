@@ -27,7 +27,7 @@ export const StyledButton = styled.button`
   &:hover{
     background-color: var(--primary-color);
     cursor: pointer;
-}
+  }
 `
 
 export const InputLine = styled.div`
@@ -42,7 +42,7 @@ export const StyledLabel = styled.label`
 
 export const FiltersContainer = styled.section`
   height: 100%;
-  width: 200px;
+  width: 220px;
   display:flex;
   flex-direction: column;
   justify-content:flex-start;
