@@ -6,8 +6,15 @@ export const StyledInput = styled.input`
   border: none;
   box-shadow: 0 0 1px black;
   width: ${props => props.width || "auto"};
-
 `
+export const StyledSelect = styled.select`
+  padding: 0.5em;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 0 1px black;
+  width: 153px;
+`
+
 export const StyledButton = styled.button`
   padding: 0.5em 1em;
   border-radius: 15px;

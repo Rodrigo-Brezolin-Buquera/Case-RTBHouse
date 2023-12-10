@@ -9,6 +9,7 @@ export const useMainPageLogic = () => {
   const [maxTotal, handleMaxTotal, clearMaxTotal] = useInput(1000000);
   const [minPrice, handleMinPrice, clearMinPrice] = useInput(0);
   const [maxPrice, handleMaxPrice, clearMaxPrice] = useInput(1000000);
+  const [sortParam, handleSort, clearSort] = useInput("");
 
   const products = data?.length && data
     .filter(product => product.name?.toLowerCase().includes(name.toLowerCase()))
@@ -21,6 +22,23 @@ export const useMainPageLogic = () => {
       const max = maxPrice || 100000
       return product.price >= minPrice && product.price <= max
     })
+    .sort((a, b) => {
+      switch (sortParam) {
+        case "Store Name":
+          return a.storeName.localeCompare(b.storeName)
+        case "Product Name":
+          return a.name.localeCompare(b.name)
+        case "Price":
+          return b.price - a.price
+        case "Amount Sold":
+          return b.amountSold - a.amountSold
+          case "Total Revenue":
+            return b.totalRevenue - a.totalRevenue  
+        default:
+          return 0;
+      }
+
+    })
 
   const clearAll = () => {
     clearName()
@@ -29,15 +47,17 @@ export const useMainPageLogic = () => {
     clearMaxTotal()
     clearMinPrice()
     clearMaxPrice()
+    clearSort()
   }
-  
+
   const inputValues = {
     name,
     store,
     minTotal,
     maxTotal,
     minPrice,
-    maxPrice
+    maxPrice,
+    sortParam
   }
   const inputHandlers = {
     handleName,
@@ -46,8 +66,9 @@ export const useMainPageLogic = () => {
     handleMaxTotal,
     handleMinPrice,
     handleMaxPrice,
+    handleSort,
     clearAll
   }
-  
+
   return [products, loading, inputHandlers, inputValues]
 }
