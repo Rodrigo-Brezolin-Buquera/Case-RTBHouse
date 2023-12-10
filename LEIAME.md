@@ -25,34 +25,33 @@ Em caso de dúvidas, por favor, entre em contato.
 ## Rodando localmente com npm  
 
 ### Passos
-**1º | Clone o repositório: **
+**1º | Clone o repositório:**
 ```bash
     git clone https://github.com/Rodrigo-Brezolin-Buquera/Case-RTBHouse.git
 ```
-**2º | Dentro da pasta raiz, acesse a pasta do backend via terminal: **
+**2º | Dentro da pasta raiz, acesse a pasta do backend via terminal:**
 ```bash
     cd rtbhouse-server/ 
 ```
-**3º | Instale as dependências com: **
+**3º | Instale as dependências com:**
 ```bash
    npm install
 ```
-**4º | Inicie a aplicação com: **
+**4º | Inicie a aplicação com:**
 ```bash
    npm run start
 ```
-**5º | Em outro terminal, ainda na pasta raiz, acesse a pasta do frontend via terminal: **
+**5º | Em outro terminal, ainda na pasta raiz, acesse a pasta do frontend via terminal:**
 ```bash
     cd rtbhouse-client/
 ```
-**6º | Instale as dependências com: **
+**6º | Instale as dependências com:**
 ```bash
    npm install
 ```  
-```
-**7º | Inicie a aplicação com:  **
+**7º | Inicie a aplicação com:**
 ```bash
    npm run start
 ``` 
-**8º | Acesse a aplicação pelo navegador:  **
+**8º | Acesse a aplicação pelo navegador:**
 [http://localhost:3000/](http://localhost:3000/)
