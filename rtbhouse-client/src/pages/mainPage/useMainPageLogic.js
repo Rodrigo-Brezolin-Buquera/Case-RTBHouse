@@ -15,11 +15,11 @@ export const useMainPageLogic = () => {
     .filter(product => product.name?.toLowerCase().includes(name.toLowerCase()))
     .filter(product => product.storeName?.toLowerCase().includes(store.toLowerCase()))
     .filter(product => {
-      const max = maxTotal || 100000
+      const max = maxTotal || 1000000
       return product.totalRevenue >= minTotal && product.totalRevenue <= max
     })
     .filter(product => {
-      const max = maxPrice || 100000
+      const max = maxPrice || 1000000
       return product.price >= minPrice && product.price <= max
     })
     .sort((a, b) => {
@@ -37,7 +37,6 @@ export const useMainPageLogic = () => {
         default:
           return 0;
       }
-
     })
 
   const clearAll = () => {
