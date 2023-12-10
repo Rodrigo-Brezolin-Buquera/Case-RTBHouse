@@ -10,7 +10,7 @@ const rotate = keyframes`
 `;
 
 export const CircularLoading =  styled.img`
-  width: 150px;
+  width: 240px;
   animation: ${rotate} 1.5s linear infinite;
 `
 

@@ -1,6 +1,6 @@
 import React from 'react'
 import { formatPrice } from '../../utils/formatPrice'
-import { ColumnHeader, Row, TableItem } from './styles'
+import { ColumnHeader, Row, TableContainer, TableItem } from './styles'
 
 export const ProductsTable = ({ products }) => {
 
@@ -12,25 +12,25 @@ export const ProductsTable = ({ products }) => {
         const { storeName, name, amountSold, price, totalRevenue, id } = product
         return (
             <Row key={id}>
-                <TableItem>{storeName}</TableItem>
-                <TableItem> {name}</TableItem>
-                <TableItem>{formatPrice(price)}</TableItem>
-                <TableItem>{amountSold}</TableItem>
-                <TableItem>{formatPrice(totalRevenue)}</TableItem>
+                <TableItem width={"120px"}>{storeName}</TableItem>
+                <TableItem width={"200px"}> {name}</TableItem>
+                <TableItem width={"100px"} >{formatPrice(price)}</TableItem>
+                <TableItem width={"60px"} justify={"center"} >{amountSold}</TableItem>
+                <TableItem width={"100px"} >{formatPrice(totalRevenue)}</TableItem>
             </Row>
         )
     })
 
     return (
-        <section>
+        <TableContainer>
             <Row>
-                <ColumnHeader>Store Name</ColumnHeader>
-                <ColumnHeader> Product</ColumnHeader>
-                <ColumnHeader>Price</ColumnHeader>
-                <ColumnHeader>Amount Sold</ColumnHeader>
-                <ColumnHeader>Total Revenue</ColumnHeader>
+                <ColumnHeader width={"120px"}>Store Name</ColumnHeader>
+                <ColumnHeader width={"200px"}> Product</ColumnHeader>
+                <ColumnHeader width={"100px"} >Price</ColumnHeader>
+                <ColumnHeader width={"60px"} >Amount</ColumnHeader>
+                <ColumnHeader width={"100px"} >Total Revenue</ColumnHeader>
             </Row>
             {productsList}
-        </section>
+        </TableContainer>
     )
 }

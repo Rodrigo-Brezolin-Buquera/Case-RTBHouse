@@ -6,7 +6,10 @@ export const GlobalStyled = createGlobalStyle`
     --secondary-color: #3A0B09;
     --accent-color: #ED4135;
     --text-color: #333333;
-    --background-color: #f5f5f5;
+    --text-variant-color: #ffffff;
+    --background-color: #ffffff;
+    --neutral-color: #f5f5f5
+   
   }
 
   * {
@@ -16,8 +19,6 @@ export const GlobalStyled = createGlobalStyle`
   }
 
   body{
-    width: 100vw;
-    min-height: 100vh;
     background-color: var(--background-color);
   }
 
