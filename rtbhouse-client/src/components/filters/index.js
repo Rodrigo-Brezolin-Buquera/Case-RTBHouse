@@ -24,7 +24,7 @@ export const Filters = ({ inputHandlers, inputValues }) => {
 
     return (
         <FiltersContainer>
-            <h3>Filters</h3>
+            <h2>Filters</h2>
             <StyledLabel htmlFor="sortParams" >Store Name</StyledLabel>
 
             <StyledSelect

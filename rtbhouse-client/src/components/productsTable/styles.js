@@ -27,7 +27,7 @@ export const Row = styled.article`
   gap: 8px;
 `
 
-export const TableContainer = styled.section`
+export const Table= styled.section`
   display:flex;
   flex-direction: column;
   justify-content: center;
@@ -38,3 +38,15 @@ export const TableContainer = styled.section`
   box-shadow: 0 0 1px black;
 
 `
+
+export const TableContainer = styled.div`
+  width: 100%;
+  height: 100%;
+  padding-top: 16px;
+  display:flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 16px;
+`
+

@@ -41,8 +41,8 @@ export const StyledLabel = styled.label`
 `
 
 export const FiltersContainer = styled.section`
-  min-height: 100vh ;
-  width: 180px;
+  height: 100%;
+  width: 200px;
   display:flex;
   flex-direction: column;
   justify-content:flex-start;
@@ -50,4 +50,6 @@ export const FiltersContainer = styled.section`
   gap: 16px;
   background-color:var(--neutral-color);
   padding: 16px 0 0 12px;
+  box-shadow: 0 0 1px black;
+
 `
