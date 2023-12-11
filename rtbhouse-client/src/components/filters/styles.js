@@ -12,7 +12,7 @@ export const StyledSelect = styled.select`
   border-radius: 10px;
   border: none;
   box-shadow: 0 0 1px black;
-  width: 153px;
+  width: 156px;
 `
 
 export const StyledButton = styled.button`

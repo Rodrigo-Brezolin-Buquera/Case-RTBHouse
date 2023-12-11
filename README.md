@@ -8,7 +8,7 @@ The test consists of a backend that sends data related to product sales, while t
 
 The backend, built with Node/Express, has only one endpoint structured in three layers. The data is fetched from two in-memory tables and organized to be consumed by the frontend. All methods were built asynchronously to simulate a real situation of accessing a database. Unit tests and an E2E test have been performed.
 
-The frontend, built in React, consists of a single page that receives the data and organizes it into a table, allowing for item filtering and sorting. It's always possible to return to the initial state. To simulate the API response time, a delay was added, along with the inclusion of a loading animation.
+The frontend, built in React with styled-components(CSS), consists of a single page that receives the data and organizes it into a table, allowing for item filtering and sorting. It's always possible to return to the initial state. To simulate the API response time, a delay was added, along with the inclusion of a loading animation. The responsiveness for mobile devices was not taken into account.
 
 If you have any questions, please feel free to contact me.
 
