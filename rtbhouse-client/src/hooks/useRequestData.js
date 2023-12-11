@@ -7,7 +7,7 @@ export const useRequestData = (path, initialState) => {
 
     const fakeLoading = async () => { 
         // loading time simulation
-        await new Promise(resolve => setTimeout(resolve, 500))
+        await new Promise(resolve => setTimeout(resolve, 700))
     }
 
     const apiCall = async () => {

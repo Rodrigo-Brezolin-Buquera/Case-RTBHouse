@@ -28,7 +28,7 @@ export const ProductsTable = ({ products }) => {
                     <ColumnHeader width={"120px"} justify={"center"} >Total Revenue</ColumnHeader>
                 </Row>
                 {
-                    products.length
+                    products?.length
                         ?
                         productsList
                         :

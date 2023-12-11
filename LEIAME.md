@@ -8,7 +8,7 @@ O teste técnico consiste em um backend que envia dados referentes às vendas de
 
 O backend, construído com Node/Express, possui apenas um endpoint estruturado em três camadas. Os dados são buscados de duas tabelas em memória e organizados para serem consumidos pelo frontend. Todos os métodos foram construídos de forma assíncrona para simular uma situação real de acesso a um banco de dados. Foram realizados testes unitários e um teste E2E.
 
-O frontend, construído em React e styled-components(CSS), consiste em uma página única que recebe esses dados e os organiza em uma tabela, na qual é possível filtrar e ordenar os itens. É sempre possível retornar ao estado inicial. Para simular o tempo de resposta da API, foi adicionado um atraso, além da inclusão de uma animação de carregamento.
+O frontend, construído em React e styled-components(CSS), consiste em uma página única que recebe esses dados e os organiza em uma tabela, na qual é possível filtrar e ordenar os itens. É sempre possível retornar ao estado inicial. Para simular o tempo de resposta da API, foi adicionado um atraso, além da inclusão de uma animação de carregamento. A responsividade para celulares não foi considerada.
 
 Em caso de dúvidas, por favor, entre em contato.
 
