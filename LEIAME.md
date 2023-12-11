@@ -1,5 +1,8 @@
 # Case-RTBHouse
 
+## Desenvolvido por:
+**Rodrigo Brezolin Buquera**
+
 ## Status:
 **Concluído**
 
